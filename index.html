@@ -3,9 +3,11 @@
 <title>Dave Swan</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -24,22 +26,19 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("img/Dave.jpg");
+  background-image: url("img/brick.jpg");
   min-height: 100%;
 }
+/*Portfolio Container*/
 
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
+/* Icons*/
+.icons {
+    color:black ;
+    margin: auto;
+    display: block;
 }
 
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-}
-
+#myIcon:hover {opacity: 0.6;}
 .w3-wide {
   letter-spacing: 10px;
   ;
@@ -50,6 +49,13 @@ body, html {
  width: 25px;
  height: 25px;
  margin: 0 5px;
+}
+
+.bgimg-2{
+    background-image: url("img/wood.jpg");
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -73,6 +79,7 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     
     </a>
@@ -90,108 +97,70 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap; text-align: center;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hello, I'm Dave Swan<span class="w3-hide-small"></span> </span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">I'm Dave Swan<span class="w3-hide-small"></span> </span>
     <br>
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">I write code, make things, and love life<span class="w3-hide-small"></span> </span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">I write code<span class="w3-hide-small"></span> </span>
+    <br>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> Build things<span class="w3-hide-small"></span> </span>
+    <br>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">& Love life<span class="w3-hide-small"></span> </span>
   </div>
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <p class="w3-center"><em>I love making</em></p>
-  <p>The act of making for me is an extension of self. I have always enjoyed creating and have found the process to be a cathartic. </p>
+<div class="container-about" id="about" style="padding-top: 200px; padding-bottom: 600px; ">
+  <p class="w3-center"><em></em></p>
+  <p style="text-align: center; font-size: 25px;">Dave Swan is a developer, designer, and outdoor enthusiast residing in Pittsburgh, PA. </p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="img/Dave Working.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+     
+      <img src="img/Dave Working.jpg"  alt="Photo of Me" width="500" height="333">
     </div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Welcome to my website. I have always enjoyed refining my craft in any activity in my life. From the first time I made a computer say “Hello World” to running my first app there is always room for improvement and that is what makes coding exciting for me the continual journey for self improvement. 
+    </p>
     </div>
   </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
-  </div>
-</div>
 
 <!-- Container (Portfolio Section) -->
 
-<div class="w3-content w3-container w3-padding-64" id="portfolio"></div>
-<div >
-  <iframe src="David A Swan Resume.pdf" width="100%" height="900"></iframe>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) 
+  <div>Icons made by <a href="https://www.flaticon.local/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.local/" title="Flaticon">www.flaticon.local</a></div> -->
+  <div class="bgimg-2">
+  <div class="container-portfolio" id="portfolio" >
 </div>
-
-<br>
-
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest projects.<br> </em></p><br>
-
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="img/SCD Home Page.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+    <div class="row" style="padding-top: 300px; padding-bottom: 500px;">
+      <div class="col-sm-4">
+        <h3 style="text-align: center">Software Development</h3>
+        <a href="code.html"><img id="myIcon"src="img/001-laptop.png" class="icons" alt="sketch icon" width="210" ></a>
+        <p>Talking with computers</p>
+    
+      </div>
+      <div class="col-sm-4">
+        <h3 style="text-align: center">Fabrication</h3>
+        <a href="build.html"><img id="myIcon" src="img/005-sketch.png" class="icons" alt="sketch icon" width="200" ></a>
+        <p>Making things with my hands</p>
+       
+      </div>
+      <div class="col-sm-4">
+        <h3 style="text-align: center">Outdoors</h3>    
+        <a href="outdoors.html"><img id="myIcon" src="img/002-trees.png" class="icons" alt="tree icon" width="200" ></a>
+        <p>Being outside and seeing what I can do</p>
+       
+      </div>
     </div>
   </div>
 
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">Lets talk!</h3>
-  <p class="w3-center"><em>I'd love to talk about code, projects, life </em></p>
+  <h3 class="w3-center">Lets chat!</h3>
+  <p class="w3-center"><em>I'd love to talk about code, projects, or life </em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
