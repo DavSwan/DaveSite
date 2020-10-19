@@ -3,6 +3,8 @@
 <title>Dave Swan</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" href="img/swan.png">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -18,114 +20,62 @@
       line-height: 1.8;
     }
     
-    /* Create a Parallax Effect */
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    
-    /* First image (Logo. Full height) */
-    .bgimg-1 {
-      background-image: url("img/pittsburgh.jpeg");
-      min-height: 100%;
-    }
-    /* Icons*/
-    .icons {
-        margin: auto;
-        display: block;
-    }
-    
-    #myIcon:hover {opacity: 0.6;}
-    .w3-wide {
-      letter-spacing: 10px;
-      ;
-      }
-    .w3-hover-opacity {cursor: pointer;}
-    
-    .img-fluid {
-    float: left;
-    width:  350px;
-    height: 350px;
-    object-fit: cover;
-    }
-
-    * {
-  box-sizing: border-box;
+    /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
 }
 
-body {
-  margin: 0;
-  font-family: Arial;
+h1 {
+  font-size: 50px;
+  word-break: break-all;
 }
 
-/* The grid: Four equal columns that floats next to each other */
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
 .column {
   float: left;
   width: 25%;
-  padding: 10px;
 }
 
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
+/* Clear floats after rows */ 
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
 }
 
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
 }
 
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
-
-  
-
-    .social-icon {
-     width: 25px;
-     height: 25px;
-     margin: 0 5px;
-    }
     
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1600px) {
-      .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-        min-height: 400px;
-      }
-    }
     </style>
-    <body>
+    <body id="build">
     
       
     
@@ -136,46 +86,60 @@ body {
           <i class="fa fa-bars"></i>
         </a>
         <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
         
         </a>
       </div>
-    
-      <!-- Navbar on small screens -->
-      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-        
-      </div>
     </div>
 
-    <h2 style="text-align: center;">Some of the things I have made.</h2>
+    <div>
+    <h2 style="text-align: center; padding: 70px;">Some of the things I have made</h2>
+    </div>
 
-
-    <!-- The four columns -->
+   <!-- Portfolio Gallery Grid -->
 <div class="row">
-    <div class="column">
-      <img src="img/tablestand1.JPEG" alt="Nature" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="img/laddershelf1.JPEG" alt="Snow" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="img/hinges.JPG" alt="Mountains" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="img/hinges.JPG" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  <div class="column">
+    <div class="content">
+    <img src="img/tablestand1.JPEG" alt="End Table" style="width:100%">
+      <h3>End Table</h3>
+      <p>This end table is the result of a few design constraints such as being able to flat pack and was optimized for nesting parts on a 4x8 sheet of Birch Plywood. </p>
     </div>
   </div>
-  
-  <div class="container">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-    <img id="expandedImg" style="width:100%">
-    <div id="imgtext"></div>
+  <div class="column">
+    <div class="content">
+    <img src="img/hinges.JPG" alt="stainless steel hinges" style="width:100%">
+      <h3>Stainless Steel Hinges</h3>
+      <p>Machined from a solid bar these hinges were used for testing and developing a new door system. </p>
+    </div>
   </div>
+  <div class="column">
+    <div class="content">
+      <img src="img/laddershelf3.JPEG" alt="Ladder Shelf" style="width:100%">
+      <h3>Ladder Shelf</h3>
+      <p>A minmilist shelf made with Nordic Pine. </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="img/Dust Shroud 3D print.JPG" alt="3D printed part" style="width:100%">
+      <h3>Dust Shroud</h3>
+      <p>I designed this part in SolidWorks and 3D printed it for a dust collection system on a CNC router table.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="img/IMG_6341.JPG" alt="welded rod" style="width:100%">
+      <h3>Welded Allthread</h3>
+      <p>Some nuts I TIG welded to all thread rods to hold together sections of a mold.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="img/IMG_0026.JPG" alt="Auminum widget" style="width:100%">
+      <h3>Aluminum Part</h3>
+      <p>A aluminium part I machined and threaded for some product development.</p>
+    </div>
+  </div>
+<!-- END GRID -->
   
   <script>
   function myFunction(imgs) {
@@ -186,131 +150,10 @@ body {
     expandImg.parentElement.style.display = "block";
   }
   </script>
-  
-    
-
-
-<!--- Portfolio Grid 
-<div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <img class="img-fluid" src="img/tablestand1.JPEG" alt="wooden table stand" >
-        <p>End Table</p>
-      </div>
-      <div class="col-sm-4">
-        <img class="img-fluid" src="img/laddershelf1.JPEG" alt="wooden ladder shelf" >
-        <p>Lorem ipsum dolor..</p>
-      </div>
-      <div class="col-sm-4">
-        <img class="img-fluid" src="img/hinges.JPG" alt="stainless steel hinges" >
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
-  </div>
--->
- <!-- Portfolio Grid
- <section class="page-section bg-light" id="portfolio">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="img/tablestand1.JPEG" alt="wooden table stand" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Threads</div>
-                        <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="img/laddershelf1.JPEG" alt="wooden ladder shelf" style="width: 270px; height: 150; margin-left: auto; margin-right: auto; display: block;"/>
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Explore</div>
-                        <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/03-thumbnail.jpg" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Finish</div>
-                        <div class="portfolio-caption-subheading text-muted">Identity</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/04-thumbnail.jpg" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Lines</div>
-                        <div class="portfolio-caption-subheading text-muted">Branding</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/05-thumbnail.jpg" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Southwest</div>
-                        <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/06-thumbnail.jpg" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Window</div>
-                        <div class="portfolio-caption-subheading text-muted">Photography</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
--->
-
-
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off" style="width: 100%;">
+    <a href="#build" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
       <a href="https://github.com/DavSwan" target="_blank" alt="GitHub Logo" class="social-icon">
         <i class="fa fa-github w3-hover-opacity" ></i>
@@ -319,7 +162,8 @@ body {
         <i class="fa fa-linkedin w3-hover-opacity"></i>
       </a>
     </div>
-    <p>Dave Swan &#169; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script></p>
+    <p>Dave Swan &#169; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script></p> &nbsp;&nbsp;
+    <a href="privacy.html">Privacy Policy</a>
   </footer>
    
   <script>

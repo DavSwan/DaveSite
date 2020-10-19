@@ -3,11 +3,14 @@
 <title>Dave Swan</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" href="img/swan.png">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
@@ -17,45 +20,60 @@
       line-height: 1.8;
     }
     
-    /* Create a Parallax Effect */
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+    /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
     
-    /* First image (Logo. Full height) */
-    .bgimg-1 {
-      background-image: url("img/pittsburgh.jpeg");
-      min-height: 100%;
-    }
-    /* Icons*/
-    .icons {
-        margin: auto;
-        display: block;
-    }
-    
-    #myIcon:hover {opacity: 0.6;}
-    .w3-wide {
-      letter-spacing: 10px;
-      ;
-      }
-    .w3-hover-opacity {cursor: pointer;}
-    
-    .social-icon {
-     width: 25px;
-     height: 25px;
-     margin: 0 5px;
-    }
-    
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1600px) {
-      .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-        min-height: 400px;
-      }
-    }
     </style>
     <body>
     
@@ -68,30 +86,51 @@
           <i class="fa fa-bars"></i>
         </a>
         <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-        
         </a>
-      </div>
-    
-      <!-- Navbar on small screens -->
-      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-        
       </div>
     </div>
 
-<h1>CoDe</h1>
+    <h2 style="text-align: center; padding: 70px;">A few projects that I have built</h2>
 
 
- 
-
+  <!-- Portfolio Gallery Grid -->
+<div class="main-content">
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="img/pong.PNG" alt="Pong" style="width:100%">
+          <h3 style="text-align: center;">Pong</h3>
+          <p>This was the first video game made and I wanted to pay homage so made a Pong game for myself. </p>
+          <div class="centerButton">
+          <button onclick="location.href='pong.html'" type="button">Play Pong</button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="img/laurapproved.PNG" alt="Lights" style="width:100%">
+          <h3 style="text-align: center;">Laur Approved</h3>
+          <p>I built this web application to empower people with an autoimmune disease to manage their symptoms through the SCD diet</p>
+          <div class="centerButton">
+            <button onclick="location.href='www.laurapproved.com'" type="button">Laur Approved</button>
+            </div>
+        </div>
+      </div>
+    </div>
+<!-- END GRID -->
+  
+  <script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+  </script>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off" style="width: 100%;">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
       <a href="https://github.com/DavSwan" target="_blank" alt="GitHub Logo" class="social-icon">
@@ -101,7 +140,8 @@
         <i class="fa fa-linkedin w3-hover-opacity"></i>
       </a>
     </div>
-    <p>Dave Swan &#169; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script></p>
+    <p>Dave Swan &#169; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script></p> &nbsp;&nbsp;
+    <a href="privacy.html">Privacy Policy</a>
   </footer>
    
   <script>
